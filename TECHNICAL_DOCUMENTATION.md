@@ -1,18 +1,18 @@
-# FutureMe — Technical Architecture & Implementation Documentation
+# DearMe — Technical Architecture & Implementation Documentation
 
-This document provides a comprehensive technical breakdown of **FutureMe**, detailing the architectural patterns, tech stack layers, AI prompt strategies, and serverless deployment structures that make this application work smoothly.
+This document provides a comprehensive technical breakdown of **DearMe**, detailing the architectural patterns, tech stack layers, AI prompt strategies, and serverless deployment structures that make this application work smoothly.
 
 ---
 
 ## 💻 Tech Stack Overview
 
-FutureMe is constructed as a modern, decoupled full-stack application designed to run seamlessly both in a local Node.js environment and on serverless CDN networks like Netlify.
+DearMe is constructed as a modern, decoupled full-stack application designed to run seamlessly both in a local Node.js environment and on serverless CDN networks like Netlify.
 
 ```mermaid
 graph TD
     A[Client Browser] -->|HTTP Requests| B[Netlify CDN / Static Hosting]
-    A -->|POST /api/generate-futureme| C[Netlify Functions / serverless-http]
-    A -->|POST /api/chat-futureme| C
+    A -->|POST /api/generate-dearme| C[Netlify Functions / serverless-http]
+    A -->|POST /api/chat-dearme| C
     C -->|API calls| D[Google Gemini 2.5 Flash API]
 ```
 
@@ -42,7 +42,7 @@ sequenceDiagram
     participant API as Express API (server.js)
     participant AI as Gemini 2.5 API
     
-    User->>API: POST /api/generate-futureme (payload details)
+    User->>API: POST /api/generate-dearme (payload details)
     Note over API: Compile details & select selected Tone Prompt
     API->>AI: generateContent(Identity Prompt)
     AI-->>API: Markdown-wrapped JSON response
@@ -60,7 +60,7 @@ sequenceDiagram
     participant API as Express API (server.js)
     participant AI as Gemini 2.5 API
 
-    User->>API: POST /api/chat-futureme (UserProfile, ChatHistory, NewQuestion)
+    User->>API: POST /api/chat-dearme (UserProfile, ChatHistory, NewQuestion)
     Note over API: Compile chat history strings & inject profile parameters
     API->>AI: generateContent(Chat Conversation Prompt)
     AI-->>API: Raw text response paragraphs
@@ -76,7 +76,7 @@ sequenceDiagram
 To ensure Gemini returns structured data that maps perfectly to our dashboard layout, we use a rigid instruction set specifying the expected JSON keys:
 
 ```text
-You are FutureMe, the future successful version of the user. You speak with emotional intelligence, clarity, and deep personal understanding. Your job is to help the user see who they are becoming, what they must change, and what they should do next.
+You are DearMe, the future successful version of the user. You speak with emotional intelligence, clarity, and deep personal understanding. Your job is to help the user see who they are becoming, what they must change, and what they should do next.
 
 Tone selected by user: {{tone}}
 User details: Name, Age, Goal, Current struggle, One-year vision.

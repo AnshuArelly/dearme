@@ -61,7 +61,7 @@ function typewriteText(element, text, speed = 50, callback = null) {
 }
 
 /**
- * Primary Form submission handler to generate FutureMe Profile
+ * Primary Form submission handler to generate DearMe Profile
  */
 async function generateIdentity(event) {
     event.preventDefault();
@@ -77,7 +77,7 @@ async function generateIdentity(event) {
     const errorBanner = document.getElementById('errorBanner');
     const loader = document.getElementById('loadingOrchestrator');
     const result = document.getElementById('resultContainer');
-    const form = document.getElementById('futureMeForm');
+    const form = document.getElementById('dearMeForm');
     const btnSubmit = document.getElementById('btnSubmitForm');
 
     // Validation Check
@@ -296,7 +296,7 @@ function showTypingIndicator() {
 }
 
 /**
- * Transmits the typed message, sends it to `/api/chat-futureme` and appends replies
+ * Transmits the typed message, sends it to `/api/chat-dearme` and appends replies
  */
 async function sendChatMessage() {
     const chatInput = document.getElementById('chatInput');
@@ -397,7 +397,7 @@ function resetToForm() {
     const errorBanner = document.getElementById('errorBanner');
     const loader = document.getElementById('loadingOrchestrator');
     const result = document.getElementById('resultContainer');
-    const form = document.getElementById('futureMeForm');
+    const form = document.getElementById('dearMeForm');
     
     errorBanner.style.display = 'none';
     loader.style.display = 'none';
@@ -413,7 +413,7 @@ function resetToForm() {
 /**
  * Focus and slide to Live chat section
  */
-function startFutureMeChat(event) {
+function startDearMeChat(event) {
     event.preventDefault();
     const chatSection = document.getElementById('chat');
     

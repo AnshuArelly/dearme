@@ -9,7 +9,7 @@ Developed with a dark, glassmorphic, Apple-inspired luxury user interface.
 ## 🛠️ Project Structure
 
 ```
-futureme/
+dearme/
   frontend/
     index.html        # Main user interface, loading screens, dynamic chat layouts
     style.css         # Styling system (fonts, glassmorphism, background orbs, chat animations)
@@ -61,7 +61,7 @@ npm run dev
 
 The Express server will start up on port `5000` and output:
 ```
-🚀 FutureMe Backend Server running on port 5000
+🚀 DearMe Backend Server running on port 5000
 📂 Serving Frontend from: .../frontend
 🌍 Open your browser at http://localhost:5000
 ```
@@ -72,7 +72,7 @@ Simply open your browser and navigate to **[http://localhost:5000](http://localh
 
 ## 🔌 API Routes Specification
 
-### 1. `POST /api/generate-futureme`
+### 1. `POST /api/generate-dearme`
 Creates the initial future identity blueprint.
 
 * **Request Body:**
@@ -102,7 +102,7 @@ Creates the initial future identity blueprint.
 }
 ```
 
-### 2. `POST /api/chat-futureme`
+### 2. `POST /api/chat-dearme`
 Exchanges messages with the simulated future self maintaining the conversation context.
 
 * **Request Body:**
@@ -134,6 +134,6 @@ Exchanges messages with the simulated future self maintaining the conversation c
 ```json
 {
   "success": true,
-  "reply": "FutureMe response paragraph content..."
+  "reply": "DearMe response paragraph content..."
 }
 ```
