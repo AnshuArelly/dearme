@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DearMe — Meet the version of you who already made it.</title>
+    <!-- Google Fonts for premium typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 4px;">
+                <path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6Z" stroke="url(#logo-grad)" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M2 6L12 13L22 6" stroke="url(#logo-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="13" r="3" fill="#FAF6F0" stroke="url(#logo-grad)" stroke-width="1.5"/>
+                <path d="M12 11.5V14.5M10.5 13H13.5" stroke="url(#logo-grad)" stroke-width="1" stroke-linecap="round"/>
+                <defs>
+                    <linearGradient id="logo-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#B29270"/>
+                        <stop offset="1" stop-color="#4A6B82"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+            DearMe
+        </div>
+        <div class="nav-links">
+            <a href="#how-it-works">How it works</a>
+            <a href="#create">Create</a>
+            <a href="#chat">Chat</a>
+            <a href="#ai-hack">AI Hack</a>
+        </div>
+        <div>
+            <a href="#create" class="btn btn-primary btn-nav">Start Now</a>
+        </div>
+    </nav>
+
+    <section class="hero-section visible">
+        <div class="hero-container">
+            <div>
+                <div class="badge">Created by Anshu • Manifest Your Future</div>
+                <h1 class="hero-headline">Meet the version of you who already made it.</h1>
+                <p class="hero-subheadline">DearMe helps you reflect, plan, and receive advice from the person you are becoming.</p>
+                <div class="hero-actions">
+                    <a href="#create" class="btn btn-primary">Create My DearMe</a>
+                    <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
+                </div>
+            </div>
+            <div class="glass-card preview-card">
+                <div class="preview-header">
+                    <div class="preview-dot"></div>
+                    <div class="preview-dot"></div>
+                    <div class="preview-dot"></div>
+                    <span class="preview-title">Message from Future You</span>
+                </div>
+                <div class="preview-body" id="previewDynamicText">
+                    “You are closer than you think. But your current habits need to match your future identity.”
+                </div>
+                <div class="preview-status">DearMe generated • 4 seconds ago</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works">
+        <div class="badge badge-glow" style="display: table; margin: 0 auto 16px;">AI Reflection</div>
+        <h2 class="section-title-center">Designed for ultimate convergence.</h2>
+        <div class="hook-grid">
+            <div class="glass-card hook-card">
+                <p style="color: var(--accent-purple); font-weight:600; margin-bottom:12px; font-size:0.85rem; text-transform:uppercase;">01 / Vision</p>
+                <h3>Your goals</h3>
+                <p>Tell FutureMe what you want to become. Map the exact paradigm of your highest ambitions.</p>
+            </div>
+            <div class="glass-card hook-card">
+                <p style="color: var(--accent-blue); font-weight:600; margin-bottom:12px; font-size:0.85rem; text-transform:uppercase;">02 / Diagnostics</p>
+                <h3>Your fears</h3>
+                <p>Be honest about what is stopping you. Shed the weight of performance metrics and address structural blocks.</p>
+            </div>
+            <div class="glass-card hook-card">
+                <p style="color: #27c93f; font-weight:600; margin-bottom:12px; font-size:0.85rem; text-transform:uppercase;">03 / Execution</p>
+                <h3>Your next move</h3>
+                <p>Get a clear message from your future self. Pure, unadulterated reality architecture built by your choices.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="create">
+        <div class="app-container">
+            <div class="glass-card app-card">
+                <div style="text-align: center; margin-bottom: 36px;">
+                    <div class="badge badge-glow">Personal Growth Engine</div>
+                    <h2 style="font-size: 2rem; background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Initialize Alignment</h2>
+                </div>
+                
+                <div id="errorBanner" class="error-banner">Please supply all parameters to ensure temporal fidelity.</div>
+
+                <form id="futureMeForm" onsubmit="generateIdentity(event)">
+                    <div class="form-grid">
+                        <div>
+                            <label class="form-label">Your Name</label>
+                            <input type="text" id="userName" class="form-control" placeholder="Your name" required>
+                        </div>
+                        <div>
+                            <label class="form-label">Your Current Age</label>
+                            <input type="number" id="userAge" class="form-control" placeholder="e.g., 25" required>
+                        </div>
+                        <div class="form-group-full">
+                            <label class="form-label">Your Dream / Goal</label>
+                            <input type="text" id="userGoal" class="form-control" placeholder="What is your ultimate dream or goal?" required>
+                        </div>
+                        <div class="form-group-full">
+                            <label class="form-label">What are you struggling with right now?</label>
+                            <textarea id="userStruggle" class="form-control" placeholder="What is the biggest roadblock or struggle holding you back?" required></textarea>
+                        </div>
+                        <div class="form-group-full">
+                            <label class="form-label">Where do you want to be in 1 year?</label>
+                            <input type="text" id="userTimeline" class="form-control" placeholder="Where do you want to be in exactly one year?" required>
+                        </div>
+                        <div class="form-group-full">
+                            <label class="form-label">Choose your DearMe tone</label>
+                            <div class="tone-selector">
+                                <label>
+                                    <input type="radio" name="tone" value="Motivational" class="tone-radio" checked>
+                                    <div class="tone-option">Motivational</div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tone" value="Brutally Honest" class="tone-radio">
+                                    <div class="tone-option">Brutally Honest</div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tone" value="Calm Mentor" class="tone-radio">
+                                    <div class="tone-option">Calm Mentor</div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="tone" value="CEO Mode" class="tone-radio">
+                                    <div class="tone-option">CEO Mode</div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" id="btnSubmitForm" class="btn btn-generate">Connect with DearMe</button>
+                </form>
+
+                <div id="loadingOrchestrator" class="loading-orchestrator">
+                    <div class="spinner"></div>
+                    <div class="loading-text" id="loadingTextText">Creating your future identity…</div>
+                </div>
+            </div>
+
+            <div id="resultContainer" class="result-container">
+                <div class="glass-card result-card">
+                    <div class="result-header">
+                        <span class="result-badge" id="outputToneBadge">Motivational Matrix</span>
+                        <h3 class="result-title">Message from DearMe</h3>
+                    </div>
+                    <div class="manifesto-block" id="outputManifesto"></div>
+                    <div class="result-grid">
+                        <div class="result-section">
+                            <h4>Your Future Identity</h4>
+                            <p id="outputIdentity"></p>
+                        </div>
+                        <div class="result-section">
+                            <h4>Your Next 3 Moves</h4>
+                            <ul id="outputMoves"></ul>
+                        </div>
+                        <div class="result-grid-cols">
+                            <div class="result-section habit-section">
+                                <h4>One Habit to Start Today</h4>
+                                <p id="outputHabit" style="font-weight: 600; color: #ffffff;"></p>
+                            </div>
+                            <div class="result-section warning-section">
+                                <h4>DearMe Warning</h4>
+                                <p id="outputWarning" style="font-weight: 600; color: #ff453a;"></p>
+                            </div>
+                        </div>
+                        <div class="result-section mantra-section">
+                            <h4>Daily Mantra</h4>
+                            <p id="outputMantra"></p>
+                        </div>
+                    </div>
+                    <div class="result-actions">
+                        <button class="btn btn-secondary" onclick="copyResultToClipboard()">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                            Copy Result
+                        </button>
+                        <button class="btn btn-secondary" onclick="resetToForm()">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path></svg>
+                            Regenerate
+                        </button>
+                        <a href="#chat" class="btn btn-primary" onclick="startFutureMeChat(event)">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                            Start Chat with DearMe
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="chat">
+        <div class="chat-wrapper">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <div id="chatStatusBadge" class="badge">Live Interface Preview</div>
+                <h2 style="font-size: 2.5rem; background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Ask your future self anything.</h2>
+            </div>
+            <div class="chat-interface">
+                <div class="chat-header">
+                    <div class="chat-avatar" id="chatAvatarInitials">DM</div>
+                    <div class="chat-user-status">
+                        <span class="chat-user-name" id="chatHeaderTitle">DearMe Core</span>
+                        <span class="chat-status-indicator" id="chatStatusText">Synchronized</span>
+                    </div>
+                </div>
+                <div class="chat-scroller" id="chatScroller">
+                    <!-- Default initial preview message -->
+                    <div class="chat-bubble bubble-future">
+                        Welcome to the temporal nexus. Fill in the reflection details above to establish alignment with your future self.
+                    </div>
+                </div>
+                <div class="chat-footer-preview">
+                    <input type="text" id="chatInput" class="chat-input-element" placeholder="Ask DearMe anything..." disabled onkeydown="handleChatKeydown(event)">
+                    <button id="sendChatBtn" class="btn btn-primary btn-send-chat" onclick="sendChatMessage()" disabled>Send</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ai-hack" class="hack-section">
+        <div class="glass-card hack-panel">
+            <div style="margin-bottom: 32px;">
+                <div class="badge badge-glow" style="background: rgba(0, 113, 227, 0.1); border-color: rgba(0, 113, 227, 0.3); color: #a4d3ff;">Live Build Module</div>
+                <h3 style="font-size: 2rem; background: var(--gradient-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Founder Lab AI Hack</h3>
+                <p style="margin-top: 8px;">Architectural frameworks deployed during the live configuration sequence.</p>
+            </div>
+            <div class="hack-grid">
+                <div class="hack-box">
+                    <div class="hack-label">Hack 01</div>
+                    <h4>Identity Prompting</h4>
+                    <p>Don’t ask AI what to do. Ask it to respond as the future version of you who already solved the problem.</p>
+                </div>
+                <div class="hack-box">
+                    <div class="hack-label">Hack 02</div>
+                    <h4>Constraint Prompting</h4>
+                    <p>Add structural boundaries like finite timeline allocations, clear capitalization limits, and energy thresholds for absolute strategic fidelity.</p>
+                </div>
+                <div class="hack-box">
+                    <div class="hack-label">Hack 03</div>
+                    <h4>Reverse Fear Prompting</h4>
+                    <p>Instruct the engine to audit your current operating system and discover exactly what point of failure your legacy self would flag down today.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="dopamine-container">
+            <h2 class="dopamine-headline">You did not just build a page.<br>You built a mirror.</h2>
+            <p class="dopamine-subheadline">DearMe turns AI from a tool into a personal growth experience.</p>
+            <button class="btn btn-primary" style="padding: 16px 32px; font-size:1rem; font-weight:600;" onclick="triggerShare()">Share My DearMe</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>Created by Anshu • DearMe</p>
+    </footer>
+
+    <div id="toastNotification" class="toast">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+            <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+        <span id="toastText">Your DearMe blueprint is ready to share.</span>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

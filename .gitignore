@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Local Environment Secrets
+.env
+.env.local
+
+# Netlify Build Outputs
+.netlify/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+*.log
