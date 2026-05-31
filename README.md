@@ -78,11 +78,11 @@ Creates the initial future identity blueprint.
 * **Request Body:**
 ```json
 {
-  "name": "Anshu",
-  "age": "23",
-  "goal": "Build a successful AI startup",
-  "struggle": "Lack of consistency",
-  "oneYearVision": "Running a profitable AI company",
+  "name": "Alex",
+  "age": "25",
+  "goal": "Build a successful software application",
+  "struggle": "Maintaining daily consistency",
+  "oneYearVision": "Launching a profitable product",
   "tone": "Brutally Honest"
 }
 ```
@@ -109,11 +109,11 @@ Exchanges messages with the simulated future self maintaining the conversation c
 ```json
 {
   "userProfile": {
-    "name": "Anshu",
-    "age": "23",
-    "goal": "Build a successful .NET SaaS startup",
-    "struggle": "Maintaining coding consistency",
-    "oneYearVision": "Running a profitable Azure-hosted SaaS platform",
+    "name": "Alex",
+    "age": "25",
+    "goal": "Build a successful software application",
+    "struggle": "Maintaining daily consistency",
+    "oneYearVision": "Launching a profitable product",
     "tone": "Brutally Honest"
   },
   "chatHistory": [
@@ -122,7 +122,7 @@ Exchanges messages with the simulated future self maintaining the conversation c
       "message": "Will I actually make it?"
     },
     {
-      "role": "futureme",
+      "role": "dearme",
       "message": "Only if your daily actions stop negotiating with your dreams."
     }
   ],

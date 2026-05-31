@@ -148,7 +148,7 @@ app.post('/api/chat-dearme', async (req, res) => {
 
     // Format recent chat history as text
     const formattedHistory = chatHistory
-      .map(msg => `${msg.role === 'user' ? 'User' : 'FutureMe'}: ${msg.message}`)
+      .map(msg => `${msg.role === 'user' ? 'User' : 'DearMe'}: ${msg.message}`)
       .join('\n');
 
     const prompt = `You are DearMe, the future version of the user who already achieved their one-year vision. Reply directly to the user’s question. Be personal, sharp, honest, and useful. Do not sound like a normal AI assistant. Do not mention that you are Gemini or an AI model. Speak like the future self.

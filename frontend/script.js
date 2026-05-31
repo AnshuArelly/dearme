@@ -242,7 +242,7 @@ function setupChatInterface(initialMessage) {
     
     // Seed chat history context
     chatHistory.push({
-        role: 'futureme',
+        role: 'dearme',
         message: greetingMsg
     });
 }
@@ -359,7 +359,7 @@ async function sendChatMessage() {
 
         // Append to state
         chatHistory.push({ role: 'user', message: query });
-        chatHistory.push({ role: 'futureme', message: reply });
+        chatHistory.push({ role: 'dearme', message: reply });
 
         // Append to UI
         appendChatBubble(reply, 'future');
