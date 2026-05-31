@@ -2,7 +2,7 @@
 
 DearMe is a premium, AI-powered personal growth and reflection application. It allows users to reflect on their current life parameters (goals, age, struggles, timelines) and receive an emotionally intelligent, personalized, and tactical message from their future self using the Gemini API. It also includes an active chat window to hold follow-up conversations with their future identity.
 
-Developed with a dark, glassmorphic, Apple-inspired luxury user interface.
+
 
 ---
 
